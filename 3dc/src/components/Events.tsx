@@ -3,22 +3,10 @@
 import React, {useState, useEffect} from 'react';
 import EventCard from './EventCard';
 import { LeftSide, RightSide } from './OnScroll';
-import ShowcaseCard from '@/components/Showcase';
+import ShowcaseCard from '@/components/ShowcaseCard';
+import { ShowcaseCardProps } from "@/components/ShowcaseCard";
+import { projects } from '@/components/Showcase';
 
-const events = [
-  {
-    title: 'Music Festival',
-    date: 'July 10, 2023',
-    description: 'Join us for a day of live music and fun!',
-  },
-  {
-    title: 'Art Exhibition',
-    date: 'August 15, 2023',
-    description: 'Explore beautiful artworks from local artists.',
-  },
-  // Add more event objects as needed
-  //sizes sm md lg xl 2xl 
-];
 
 
 const getData = async () => {
@@ -31,31 +19,36 @@ const getData = async () => {
 
   }
 
-  return res.json() as Promise<EventsType[]>;
+  return res.json() as Promise<ShowcaseCardProps[]>;
 }
 
-export type EventsType = {
-  title: string;
-  date: string;
-  description: string;
-  image_link: string;
-};
+// export type EventsType = {
+//   title: string;
+//   date: string;
+//   description: string;
+//   image_link: string;
+// };
 
 type Props = {
-  params:EventsType[]
+  params:ShowcaseCardProps[]
 }
 
 //export default function Events() {
 const Events = (): JSX.Element => {
 //const Events = async ({params}:Props) => {
-  const [data, setData] = useState<EventsType[]>([]);
+  const [data, setData] = useState<ShowcaseCardProps[]>([]);
 
-  useEffect(() => {
+  useEffect( () => {
     const fetchData = async () => {
       try {
-        const eventsData:EventsType[] = await getData();
-        setData(eventsData);
-        console.log('Data:', JSON.stringify(eventsData[0]));
+        //uncomment when database has data 
+        //const eventsData:EventsType[] = await getData();
+        //setData(eventsData);
+        //console.log('Data:', JSON.stringify(eventsData[0]));
+
+        setData(projects);
+
+        
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -142,19 +135,22 @@ const Events = (): JSX.Element => {
           /> 
           */}
             <div className=" event-list px-4 py-4 flex gap-4 overflow-auto">
-              {data.map( ( event:EventsType, index ) => (
+              {data.map( ( event:ShowcaseCardProps, index ) => (
                 
                 // <div>{event.title},{event.date}</div>
                 
               <ShowcaseCard 
-                key = {index} {...event}
+                key = {index} 
+                {...event}
                 // key={index}
                 // title={event.title}
                 // date={event.date}
                 // description={event.description}
                 // image_link = {event.image_link}
                 // href = {'/events/${index}'}
-              />
+                />
+
+
                ))
               }
             </div>

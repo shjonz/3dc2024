@@ -1,3 +1,5 @@
+"use client"
+
 import AboutHeader from '@/components/Header';
 import Team from '@/components/Team';
 import Branch from '@/components/Branch';

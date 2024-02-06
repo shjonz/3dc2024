@@ -3,7 +3,7 @@ import { FaHome, FaInfoCircle, FaCalendarAlt, FaSignInAlt } from 'react-icons/fa
 
 const Navigation: React.FC = () => {
   return (
-    <nav className="bg-gray-800 p-4 text-white flex items-center">
+    <nav className="bg-white p-4 text-blue flex items-center">
       {/* Icon on the left */}
       <div className="mr-auto">
         <FaHome size={24} />

@@ -1,3 +1,5 @@
+"use client"
+
 import Disclaimer from "@/components/Disclaimer";
 import Newsletter from "@/components/Newsletter";
 import ProjectHeader from "@/components/Header";
