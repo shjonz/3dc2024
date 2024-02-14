@@ -13,7 +13,7 @@ export default function Newsletter() {
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               Interested in internships, latest tech news, and other events?
-              Subscribe to our newsletter and don't miss out!
+              Subscribe to our newsletter and dont miss out!
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">

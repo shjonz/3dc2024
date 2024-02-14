@@ -40,8 +40,10 @@ export default function CategoryCards() {
     <>
       <div className="flex w-full place-content-center">
         <div className="grid gap-4 grid-cols-4 justify-center mt-10 mx-10">
-          {categories.map((category) => (
-            <OutlinedCard {...category} />
+          {categories.map(( category, index) => (
+            <OutlinedCard
+             key = {index}
+             {...category} />
           ))}
         </div>
       </div>
