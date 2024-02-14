@@ -79,10 +79,10 @@ const Events = (): JSX.Element => {
   //};
 
   
-
+//lg:px-40 lg:py-40 md:px-10
 
   return (
-    <div className="snap-center flex-shrink-0 mx-auto max-w-7xl px-6 md:px-10 lg:px-40 xl:px-30 ">
+    <div className="snap-center flex-shrink-0 mx-auto  md:px-10 lg:px-40 lg:py-40 xl:px-30 ">
       <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-10 ">
         <div className="space-y-4 ">
 
@@ -157,11 +157,12 @@ const Events = (): JSX.Element => {
           </div>
         </RightSide>
 
-        <div className="flex ">
+        {/* <div className="flex ">
           <a href="/events " className="">
             Show More
           </a>
-        </div>
+        </div> */}
+
       </div>
     </div>
   );
