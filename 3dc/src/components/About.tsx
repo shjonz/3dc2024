@@ -138,15 +138,6 @@ export default function About() {
                 <ExcoCards 
                 key={index} 
                 {...event}
-                // name={event.name}
-                // role={event.role}
-                // description={event.description}
-                // github={event.github}
-                // linkedin={event.linkedin}
-                // email={event.email}
-                // telegram={event.telegram}
-                //image = {event.image}
-                //href={event.href}  
                 />
               ) )}
             </div>

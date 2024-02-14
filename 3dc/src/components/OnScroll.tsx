@@ -54,7 +54,6 @@ export const Shapes = ( ) => {
     
   }}
 >
-  {/* closing addition */}
   
 </div>
     )

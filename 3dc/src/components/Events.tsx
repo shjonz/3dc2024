@@ -22,13 +22,6 @@ const getData = async () => {
   return res.json() as Promise<ShowcaseCardProps[]>;
 }
 
-// export type EventsType = {
-//   title: string;
-//   date: string;
-//   description: string;
-//   image_link: string;
-// };
-
 type Props = {
   params:ShowcaseCardProps[]
 }
@@ -142,12 +135,6 @@ const Events = (): JSX.Element => {
               <ShowcaseCard 
                 key = {index} 
                 {...event}
-                // key={index}
-                // title={event.title}
-                // date={event.date}
-                // description={event.description}
-                // image_link = {event.image_link}
-                // href = {'/events/${index}'}
                 />
 
 

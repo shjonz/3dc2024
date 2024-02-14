@@ -3,12 +3,7 @@ import ClubLogo from "@/components/ClubLogo";
 import { Reveal } from "./Reveal";
 import { Shapes } from "./OnScroll";
 import { motion } from "framer-motion";
-// const navigation = [
-//   { name: 'Product', href: '#' },
-//   { name: 'Features', href: '#' },
-//   { name: 'Marketplace', href: '#' },
-//   { name: 'Company', href: '#' },
-// ];
+
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
