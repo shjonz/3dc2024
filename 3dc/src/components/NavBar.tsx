@@ -1,52 +1,11 @@
-// import Link from 'next/link';
-// import { FaHome, FaInfoCircle, FaCalendarAlt, FaSignInAlt } from 'react-icons/fa';
-
-// const Navigation: React.FC = () => {
-//   return (
-//     <nav className="bg-white p-4 text-blue flex items-center">
-//       {/* Icon on the left */}
-//       <div className="mr-auto">
-//         <FaHome size={24} />
-//       </div>
-
-//       {/* Navigation links */}
-//       <ul className="flex space-x-4">
-//         <NavItem href="/" icon={<FaHome size={20} />} label="Home" />
-//         <NavItem href="/about" icon={<FaInfoCircle size={20} />} label="About" />
-//         <NavItem href="/events" icon={<FaCalendarAlt size={20} />} label="Events" />
-//         <NavItem href="/login" icon={<FaSignInAlt size={20} />} label="Login" />
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// interface NavItemProps {
-//   href: string;
-//   icon: React.ReactNode;
-//   label: string;
-// }
-
-// const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => {
-//   return (
-//     <li>
-//       <Link href={href}>
-//           {icon}
-//           <span>{label}</span>
-//       </Link>
-//     </li>
-//   );
-// };
-
-// export default Navigation;
-
-
-
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaHome, FaInfoCircle, FaCalendarAlt, FaSignInAlt } from 'react-icons/fa';
+import { LiaThinkPeaks } from 'react-icons/lia';
+import UserLinks from './UserLinks';
 
-const Navigation: React.FC = () => {
+const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -76,31 +35,37 @@ const Navigation: React.FC = () => {
 
       {/* Navigation links */}
       <ul className="flex space-x-4">
-        <NavItem href="/" icon={<FaHome size={20} />} label="Home" />
-        <NavItem href="/about" icon={<FaInfoCircle size={20} />} label="About" />
-        <NavItem href="/events" icon={<FaCalendarAlt size={20} />} label="Events" />
-        <NavItem href="/login" icon={<FaSignInAlt size={20} />} label="Login" />
+        {/* <Link href="/" icon={<FaHome size={20} />} label="Home" />
+        <Link href="/about" icon={<FaInfoCircle size={20} />} label="About" />
+        <Link href="/events" icon={<FaCalendarAlt size={20} />} label="Events" /> */}
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/events">Events</Link>
+        
+        {/* <Link href="/login" icon={<FaSignInAlt size={20} />} label="Login" /> */}
+        <UserLinks />
       </ul>
+      
     </nav>
   );
 };
 
-interface NavItemProps {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}
+// interface NavItemProps {
+//   href: string;
+//   icon: React.ReactNode;
+//   label: string;
+// }
 
-const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => {
-  return (
-    <li>
-      <Link href={href}>
-        {icon}
-        <span>{label}</span>
-      </Link>
-    </li>
-  );
-};
+// const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => {
+//   return (
+//     <li>
+//       <Link href={href}>
+//         {icon}
+//         <span>{label}</span>
+//       </Link>
+//     </li>
+//   );
+// };
 
 export default Navigation;
 

@@ -8,6 +8,7 @@ import Events from "@/components/Events";
 import Disclaimer from "@/components/Disclaimer";
 //import { ThemeProvider } from "@material-tailwind/react";
 import { StyledEngineProvider } from "@mui/material";
+import AuthProvider from "@/components/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function RootLayout({
     <html lang="en">
     {/* <ThemeProvider> */}
       <body className={inter.className}>
-        {children}</body>
+        <AuthProvider>
+        {children}
+        </AuthProvider>
+        </body>
     {/* </ThemeProvider> */}
     </html>
     
